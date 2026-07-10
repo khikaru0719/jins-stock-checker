@@ -1,0 +1,14 @@
+name: JINS Stock Checker
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  check-stock:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run stock checker
+        run: python3 jins_stock_checker.py
