@@ -32,10 +32,17 @@ NOTIFY_TO = "khikaru0719@gmail.com"       # 通知を受け取りたいメール
 
 def is_in_stock(url: str, sold_out_text: str) -> bool:
     """商品ページを取得し、在庫があるかどうかを判定する"""
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "Mozilla/5.0 (compatible; StockChecker/1.0)"}
-    )
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/125.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "ja-JP,ja;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": "https://www.jins.com/jp/",
+    }
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=15) as res:
         html = res.read().decode("utf-8", errors="ignore")
     return sold_out_text not in html
