@@ -21,12 +21,12 @@ from email.mime.text import MIMEText
 import urllib.request
 
 # ============ CONFIG（ここを書き換える） ============
-PRODUCT_URL = "https://www.jins.com/jp/item/UTF-23S-183-95.html"  # 監視したい商品ページのURL
+PRODUCT_URL = "https://www.jins.com/jp/item/MTF-23S-184_95.html"  # 監視したい商品ページのURL
 SOLD_OUT_TEXT = "SOLD OUT"  # 品切れ時にページに表示される文言（必要に応じて変更）
 
-GMAIL_ADDRESS = "your_gmail_address@gmail.com"      # 送信元Gmailアドレス
-GMAIL_APP_PASSWORD = "xxxx xxxx xxxx xxxx"          # Googleアプリパスワード（16桁）
-NOTIFY_TO = "your_notify_address@example.com"       # 通知を受け取りたいメールアドレス
+GMAIL_ADDRESS = "khikaru0719@gmail.com"      # 送信元Gmailアドレス
+GMAIL_APP_PASSWORD = "xolg tyuy muad ykhi"          # Googleアプリパスワード（16桁）
+NOTIFY_TO = "khikaru0719@gmail.com"       # 通知を受け取りたいメールアドレス
 # =====================================================
 
 
